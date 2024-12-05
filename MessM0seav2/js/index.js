@@ -1,3 +1,35 @@
+// Remettre la page en haut lors du rechargement
+window.addEventListener('beforeunload', function () {
+    window.scrollTo(0, 0); // Définit la position de défilement en haut à gauche
+});
+
+//////////////////////////////////////
+// Code pour la mouette
+//////////////////////////////////////
+const boutonSeagull = document.getElementById("boutonSeagull");
+
+// Fonction pour déplacer l'image aléatoirement
+function deplacerAleatoirement() {
+    const x = Math.random() * window.innerWidth * 1.3 - window.innerWidth * 0.2;
+    const y = Math.random() * window.innerHeight * 1.3 - window.innerWidth * 0.2;
+    boutonSeagull.style.left = `${x}px`;
+    boutonSeagull.style.top = `${y}px`;
+}
+
+// Fonction à exécuter lors du clic sur l'image
+function imageCliquee() {
+}
+
+// Déplace l'image toutes les 2 secondes
+setInterval(deplacerAleatoirement, 1000);
+
+// Déplace l'image immédiatement au chargement
+deplacerAleatoirement();
+
+//////////////////////////////////////
+// Code pour les vagues
+//////////////////////////////////////
+
 // Récupération du canvas
 const canvas = document.getElementById('wavesCanvas');
 const ctx = canvas.getContext('2d');
@@ -89,3 +121,39 @@ function animate() {
 
 // Démarrer l'animation
 animate();
+
+//////////////////////////////////////
+// Code pour le bouton de défilement
+//////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButton = document.getElementById('boutonSeagull');
+    if (scrollButton) {
+        scrollButton.addEventListener('click', function() {
+            console.log('Button clicked');
+            const targetPosition = window.innerHeight;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 2000; // Durée de l'animation en millisecondes (2 secondes)
+            let start = null;
+
+            window.requestAnimationFrame(function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            }
+        });
+    } else {
+        console.error('Button with id "scrollButton" not found');
+    }
+});

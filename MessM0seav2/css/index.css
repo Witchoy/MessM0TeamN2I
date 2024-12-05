@@ -5,6 +5,19 @@ body {
     overflow: hidden;
 }
 
+#boutonSeagull {
+    position: absolute;
+    width: 150px; /* Taille de l'image */
+    height: 150px;
+    cursor: pointer; /* Indique que c'est cliquable */
+    transition: all 0.4s ease; /* Animation lors du déplacement */
+    z-index: 1000; /* Assure que l'image est en avant-plan */
+}
+
+#boutonSeagull:hover {
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+
 .ocean-view {
     position: relative;
     height: 100vh;
