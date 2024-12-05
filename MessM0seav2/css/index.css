@@ -72,9 +72,30 @@ canvas {
 }
 
 
-.contenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.content {
+    padding: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    transition: background 0.3s ease; /* Transition douce pour l'effet de dégradé */
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.content h3 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #d9e4f1;
+}
+
+.content p {
+    margin-top: 15px;
+}
+
+.content a {
+    color: #4facfe;
+    text-decoration: none;
 }
