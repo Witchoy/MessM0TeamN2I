@@ -7,6 +7,7 @@
     <title>Immersion Océanique</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/captcha.css">
 </head>
 
 <body>
@@ -114,6 +115,35 @@
 
     <button id="bottom3Button" onclick="scrollToSection('layer4')">Click Me
     </button>
+
+    <!-- Modal Structure -->
+    <div id="captchaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="captcha-container">
+                <h1>Captcha : Associez les objets à leur contexte</h1>
+                <p>Faites glisser chaque objet dans la zone correspondante.</p>
+
+                <!-- Objets à déplacer -->
+                <div class="draggable-items">
+                    <div class="draggable" draggable="true" id="apple">🍎 Pomme</div>
+                    <div class="draggable" draggable="true" id="fish">🐟 Poisson</div>
+                    <div class="draggable" draggable="true" id="sun">☀️ Soleil</div>
+                </div>
+
+                <!-- Zones de dépôt -->
+                <div class="drop-zones">
+                    <div class="drop-zone" data-match="apple">Verger</div>
+                    <div class="drop-zone" data-match="fish">Océan</div>
+                    <div class="drop-zone" data-match="sun">Ciel</div>
+                </div>
+
+                <!-- Bouton de vérification -->
+                <button id="verify">Vérifier</button>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
 
 
 </section>
@@ -277,6 +307,7 @@
 
 <script src="../js/index.js"></script>
 <script src="../js/cards.js"></script>
+<script src="../js/captcha.js"></script>
 
 </body>
 </html>
