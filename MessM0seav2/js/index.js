@@ -244,3 +244,9 @@ function playAudioRandomly() {
 
 // Start playing audio randomly
 playAudioRandomly();
+
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight * 0.3; // Adjust height for responsiveness
+}
