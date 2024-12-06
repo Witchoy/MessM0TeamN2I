@@ -5,6 +5,10 @@ body {
     overflow: hidden;
 }
 
+/*---------------------
+------- Boutons -------
+----------------------*/
+
 #boutonSeagull {
     position: absolute;
     width: 150px; /* Taille de l'image */
@@ -18,12 +22,56 @@ body {
     transform: scale(1.2); /* Agrandissement au survol */
 }
 
+#boutonImage2 {
+    position: absolute;
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    animation: demiCercle 4s linear infinite; /* Animation */
+    z-index: 0; /* Assure que l'image est en avant-plan */
+}
+
+#boutonImageLayer {
+    position: absolute;
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    animation: demiCercle 4s linear infinite; /* Animation */
+    z-index: 2; /* Assure que l'image est en avant-plan */
+    border: none; /* Supprime la bordure */
+}
+
+#wavesCanvas {
+    z-index: 1;
+}
+
+@keyframes demiCercle {
+    0% {
+        transform: translate(100vw, 20vh); /* Position de départ (droite) */
+    }
+    25% {
+        transform: translate(80vw, -10vh); /* Milieu haut du demi-cercle */
+    }
+    50% {
+        transform: translate(60vw, 10vh); /* Milieu bas */
+    }
+    75% {
+        transform: translate(40vw, -10vh); /* Milieu haut côté gauche */
+    }
+    100% {
+        transform: translate(20vw, 20vh); /* Arrivée (gauche) */
+    }
+}
+
+/*---------------------
+-------- Océan --------
+----------------------*/
+
 .ocean-view {
     position: relative;
     height: 100vh;
     background: linear-gradient(to bottom, #ff7e5f, #feb47b, #ff9a8b, #f7b7a3, #2b5876); /* Dégradé coucher de soleil */
     background-size: cover;
     overflow: hidden;
+    z-index: 20;
 }
 
 .ocean-surface-text {
@@ -98,4 +146,17 @@ canvas {
 .content a {
     color: #4facfe;
     text-decoration: none;
+}
+
+
+#firstLayer {
+    background: linear-gradient(to bottom, #4e7bc0, #1e3a5f), url('../img/heart.png') no-repeat center center;
+    background-size: cover;
+}
+
+#heartImg {
+    position: absolute;
+    width: 110px; /* Taille de l'image */
+    height: 140px;
+    z-index: 0; /* Assure que l'image est en avant-plan */
 }

@@ -1,7 +1,23 @@
 // Remettre la page en haut lors du rechargement
 window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0); // Définit la position de défilement en haut à gauche
-});
+})
+
+
+//////////////////////////////////////
+// Code pour le Pwasson
+//////////////////////////////////////
+
+const boutonImage2 = document.getElementById("boutonImage2");
+const boutonImageLayer = document.getElementById("boutonImageLayer");
+function placerFish() {
+    const y = window.innerHeight*0.8;
+    boutonImage2.style.top = `${y}px`;
+    boutonImageLayer.style.top = `${y}px`;
+
+}
+placerFish();
+
 
 //////////////////////////////////////
 // Code pour la mouette
