@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immersion Océanique</title>
-    <link rel="stylesheet" href="MessM0seav2/css/index.css">
-    <link rel="stylesheet" href="MessM0seav2/css/cards.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/captcha.css">
 </head>
 
 <body>
@@ -29,9 +30,9 @@
     <canvas id="wavesCanvas"></canvas>
 
     <!-- Image bouton mobile -->
-    <img src="MessM0seav2/img/seagull.png" alt="seagull.png" id="boutonSeagull" onclick="scrollToSection('layer1')">
-    <img src="MessM0seav2/img/empty.png" alt="empty.png" id="boutonImageLayer" onclick="window.location.href='CookieCauchemar.html'">
-    <img src="MessM0seav2/img/pwasson" alt="pwasson" id="boutonImage2" onclick="window.location.href='CookieCauchemar.html'">
+    <img src="../img/seagull.png" alt="seagull.png" id="boutonSeagull" onclick="scrollToSection('layer1')">
+    <img src="../img/empty.png" alt="empty.png" id="boutonImageLayer" onclick="window.location.href='CookieCauchemar.html'">
+    <img src="../img/pwasson" alt="pwasson" id="boutonImage2" onclick="window.location.href='CookieCauchemar.html'">
 
     <!-- Indicateur de scroll -->
     <div class="scroll-indicator">Cliquez pour plonger</div>
@@ -52,7 +53,7 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
         </button>
 
         <button id="bottom1Button" onclick="scrollToSection('layer2')">Click Me
@@ -60,87 +61,116 @@
 
     </section>
 
-<!-- 2ème section pour continuer vers le bas -->
-<section id="layer2" class="content">
+    <!-- 2ème section pour continuer vers le bas -->
+    <section id="layer2" class="content">
 
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-                <h3>Cœur</h3>
-                <p>Le cœur humain est un organe vital qui assure la circulation du sang à travers le corps.
-                    Il est composé de quatre cavités : deux oreillettes et deux ventricules.
-                    Le cœur fonctionne comme une pompe qui envoie le sang oxygéné dans tout le corps pour nourrir les organes et les tissus,
-                    tout en récupérant le sang pauvre en oxygène pour l'envoyer vers les poumons.
-                    Il bat environ 70 à 75 fois par minute au repos et peut s'accélérer en fonction des besoins de l'organisme,
-                    par exemple pendant l'exercice physique. Le cœur joue un rôle clé dans le maintien de l'homéostasie,
-                    en régulant la température corporelle et en veillant à ce que chaque cellule du corps reçoive les nutriments
-                    et l'oxygène dont elle a besoin pour fonctionner. Il est ainsi essentiel à la survie et au bien-être de l'organisme.</p>
-            </div>
-            <div class="card-back">
-                <h3>Courants océaniques</h3>
-                <p>Les courants marins sont souvent comparés au cœur de l'océan en raison de leur rôle crucial dans le maintien de la dynamique de l'écosystème marin. Ces courants agissent comme un système circulatoire pour l'océan, en transportant l'eau, la chaleur, les nutriments et les gaz dissous à travers les vastes étendues océaniques. Ils régulent la température des océans, affectant ainsi le climat global. Par exemple, le courant chaud du Golfe, qui transporte de l'eau chaude des tropiques vers le nord de l'Atlantique, joue un rôle clé dans le réchauffement de l'Europe de l'Ouest.
-                    Les courants marins permettent également une circulation de l'eau qui soutient la vie marine, en acheminant des nutriments essentiels pour la photosynthèse des phytoplanctons et en permettant aux espèces marines de migrer et de se nourrir. De plus, ces courants influencent les cycles de reproduction de nombreuses espèces marines. Tout comme le cœur humain permet aux organes de recevoir de l'oxygène et des nutriments, les courants marins assurent la "santé" de l'océan en maintenant un équilibre vital entre ses différentes régions. Ils contribuent à la stabilité des écosystèmes marins et sont donc essentiels à la biodiversité océanique.</p>
-            </div>
-        </div>
-    </div>
-
-    <button class="boutonLifeBelt" onclick="scrollToTop()">
-        <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-    </button>
-    <div class="bubble-container"></div>
-    <button id="bottom2Button" onclick="scrollToSection('layer3')">Click Me
-    </button>
-
-</section>
-
-<!-- 3ème section pour continuer vers le bas -->
-<section id="layer3" class="content">
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-                <h3>Poumon</h3>
-                <p>Les poumons sont les organes responsables des échanges gazeux dans le corps humain. Ils prennent l'oxygène de l'air et éliminent le dioxyde de carbone, permettant la respiration et la survie de toutes les cellules. Ils jouent un rôle fondamental dans l’équilibre de l'oxygène et du CO2 dans l’organisme.</p>
-            </div>
-            <div class="card-back">
-                <h3>Le poumon bleu</h3>
-                <p>L’océan est souvent qualifié de "poumon bleu" de la Terre. Il génère environ 50% de l'oxygène terrestre, principalement grâce à la photosynthèse réalisée par le phytoplancton. De plus, l'océan absorbe le CO2, agissant comme un régulateur du climat en atténuant les effets des gaz à effet de serre.</p>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Cœur</h3>
+                    <p>Le cœur humain est un organe vital qui assure la circulation du sang à travers le corps.
+                        Il est composé de quatre cavités : deux oreillettes et deux ventricules.
+                        Le cœur fonctionne comme une pompe qui envoie le sang oxygéné dans tout le corps pour nourrir les organes et les tissus,
+                        tout en récupérant le sang pauvre en oxygène pour l'envoyer vers les poumons.
+                        Il bat environ 70 à 75 fois par minute au repos et peut s'accélérer en fonction des besoins de l'organisme,
+                        par exemple pendant l'exercice physique. Le cœur joue un rôle clé dans le maintien de l'homéostasie,
+                        en régulant la température corporelle et en veillant à ce que chaque cellule du corps reçoive les nutriments
+                        et l'oxygène dont elle a besoin pour fonctionner. Il est ainsi essentiel à la survie et au bien-être de l'organisme.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Courants océaniques</h3>
+                    <p>Les courants marins sont souvent comparés au cœur de l'océan en raison de leur rôle crucial dans le maintien de la dynamique de l'écosystème marin. Ces courants agissent comme un système circulatoire pour l'océan, en transportant l'eau, la chaleur, les nutriments et les gaz dissous à travers les vastes étendues océaniques. Ils régulent la température des océans, affectant ainsi le climat global. Par exemple, le courant chaud du Golfe, qui transporte de l'eau chaude des tropiques vers le nord de l'Atlantique, joue un rôle clé dans le réchauffement de l'Europe de l'Ouest.
+                        Les courants marins permettent également une circulation de l'eau qui soutient la vie marine, en acheminant des nutriments essentiels pour la photosynthèse des phytoplanctons et en permettant aux espèces marines de migrer et de se nourrir. De plus, ces courants influencent les cycles de reproduction de nombreuses espèces marines. Tout comme le cœur humain permet aux organes de recevoir de l'oxygène et des nutriments, les courants marins assurent la "santé" de l'océan en maintenant un équilibre vital entre ses différentes régions. Ils contribuent à la stabilité des écosystèmes marins et sont donc essentiels à la biodiversité océanique.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bubble-container"></div>
-    <button class="boutonLifeBelt" onclick="scrollToTop()">
-        <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-    </button>
 
-    <button id="bottom3Button" onclick="scrollToSection('layer4')">Click Me
-    </button>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
+        <div class="bubble-container"></div>
+        <button id="bottom2Button" onclick="scrollToSection('layer3')">Click Me
+        </button>
 
+    </section>
 
-</section>
-
-<!-- 4ème section pour continuer vers le bas -->
-<section id="layer4" class="content">
-    <div class="card">
-        <div class="card-inner">
-            <div class="card-front">
-                <h3>Estomac</h3>
-                <p>L'estomac est un organe qui décompose les aliments, en extrayant les nutriments nécessaires à l'énergie et à la réparation cellulaire. Il joue un rôle crucial dans la digestion en transformant les aliments en substances que le corps peut utiliser efficacement.</p>
-            </div>
-            <div class="card-back">
-                <h3>La sédimentation</h3>
-                <p>Les zones de sédimentation sous-marines agissent comme l'estomac de l'océan, en décomposant et en stockant les nutriments organiques et minéraux. Ces sédiments nourrissent les chaînes alimentaires marines, offrant des ressources essentielles aux organismes marins.</p>
+    <!-- 3ème section pour continuer vers le bas -->
+    <section id="layer3" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Poumon</h3>
+                    <p>Les poumons sont les organes responsables des échanges gazeux dans le corps humain. Ils prennent l'oxygène de l'air et éliminent le dioxyde de carbone, permettant la respiration et la survie de toutes les cellules. Ils jouent un rôle fondamental dans l’équilibre de l'oxygène et du CO2 dans l’organisme.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Le poumon bleu</h3>
+                    <p>L’océan est souvent qualifié de "poumon bleu" de la Terre. Il génère environ 50% de l'oxygène terrestre, principalement grâce à la photosynthèse réalisée par le phytoplancton. De plus, l'océan absorbe le CO2, agissant comme un régulateur du climat en atténuant les effets des gaz à effet de serre.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="bubble-container"></div>
-    <button class="boutonLifeBelt" onclick="scrollToTop()">
-        <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-    </button>
-    <button id="bottom4Button" onclick="scrollToSection('layer5')">Click Me
-    </button>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
+
+        <button id="bottom3Button" onclick="scrollToSection('layer4')">Click Me
+        </button>
+
+        <!-- Modal Structure -->
+        <div id="captchaModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="captcha-container">
+                    <h1>Captcha : Associez les objets à leur contexte</h1>
+                    <p>Faites glisser chaque objet dans la zone correspondante.</p>
+
+                    <!-- Objets à déplacer -->
+                    <div class="draggable-items">
+                        <div class="draggable" draggable="true" id="apple">🍎 Pomme</div>
+                        <div class="draggable" draggable="true" id="fish">🐟 Poisson</div>
+                        <div class="draggable" draggable="true" id="sun">☀️ Soleil</div>
+                    </div>
+
+                    <!-- Zones de dépôt -->
+                    <div class="drop-zones">
+                        <div class="drop-zone" data-match="apple">Verger</div>
+                        <div class="drop-zone" data-match="fish">Océan</div>
+                        <div class="drop-zone" data-match="sun">Ciel</div>
+                    </div>
+
+                    <!-- Bouton de vérification -->
+                    <button id="verify">Vérifier</button>
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
 
 
-</section>
+    </section>
+
+    <!-- 4ème section pour continuer vers le bas -->
+    <section id="layer4" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Estomac</h3>
+                    <p>L'estomac est un organe qui décompose les aliments, en extrayant les nutriments nécessaires à l'énergie et à la réparation cellulaire. Il joue un rôle crucial dans la digestion en transformant les aliments en substances que le corps peut utiliser efficacement.</p>
+                </div>
+                <div class="card-back">
+                    <h3>La sédimentation</h3>
+                    <p>Les zones de sédimentation sous-marines agissent comme l'estomac de l'océan, en décomposant et en stockant les nutriments organiques et minéraux. Ces sédiments nourrissent les chaînes alimentaires marines, offrant des ressources essentielles aux organismes marins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
+        <button id="bottom4Button" onclick="scrollToSection('layer5')">Click Me
+        </button>
+
+
+    </section>
 
     <!-- 5ème section pour continuer vers le bas -->
     <section id="layer5" class="content">
@@ -158,8 +188,8 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-        </button>    
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
         <button id="bottom5Button" onclick="scrollToSection('layer6')">Click Me
         </button>
     </section>
@@ -180,8 +210,8 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-        </button>    
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
         <button id="bottom6Button" onclick="scrollToSection('layer7')">Click Me
         </button>
     </section>
@@ -202,8 +232,8 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-        </button>    
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
         <button id="bottom7Button" onclick="scrollToSection('layer8')">Click Me
         </button>
     </section>
@@ -225,8 +255,8 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-        </button>    
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
         <button id="bottom8Button" onclick="scrollToSection('layer9')">Click Me
         </button>
     </section>
@@ -246,8 +276,8 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-        </button>    
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
         <button id="bottom9Button" onclick="scrollToSection('layer10')">Click Me
         </button>
     </section>
@@ -267,16 +297,17 @@
         </div>
         <div class="bubble-container"></div>
         <button class="boutonLifeBelt" onclick="scrollToTop()">
-            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
-        </button>    
+            <img src="../img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
         <button id="bottom10Button" onclick="scrollToSection('layer11')">Click Me
         </button>
     </section>
 
 </div>
 
-<script src="MessM0seav2/js/cards.js"></script>
-<script src="MessM0seav2/js/index.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/cards.js"></script>
+<script src="../js/captcha.js"></script>
 
 </body>
 </html>
