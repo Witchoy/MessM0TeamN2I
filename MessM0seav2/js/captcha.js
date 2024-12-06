@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollButton.addEventListener('click', function() {
             // Create a new button element
             const newButton = document.createElement('button');
-            newButton.textContent = 'New Button';
+            newButton.textContent = 'Vrai boutton pour passer la vérification :)';
             newButton.style.marginLeft = '10px'; // Add some space between the buttons
 
             // Insert the new button next to the existing one
