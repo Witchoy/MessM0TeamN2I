@@ -150,7 +150,7 @@ canvas {
 
 
 #firstLayer {
-    background: linear-gradient(to bottom, #4e7bc0, #1e3a5f), url('../img/heart.png') no-repeat center center;
+    background: linear-gradient(to bottom, #4269b4, #1e3a5f), url('../img/heart.png') no-repeat center center;
     background-size: cover;
 }
 
