@@ -141,7 +141,7 @@ Bulles
 ----------------------*/
 
 .boutonLifeBelt {
-    position: absolute;
+    horiz-align: right;
     background-color: transparent;
     z-index: 0; /* Assure que l'image est en avant-plan */
 }
