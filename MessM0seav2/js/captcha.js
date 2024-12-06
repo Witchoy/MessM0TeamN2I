@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollButton = document.getElementById('bottom2Button');
     if (scrollButton) {
         scrollButton.addEventListener('click', function() {
+
             // Create a new button element
             const newButton = document.createElement('button');
             newButton.textContent = 'Vrai boutton pour passer la vérification :)';

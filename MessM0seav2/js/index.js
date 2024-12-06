@@ -1,7 +1,7 @@
 // Remettre la page en haut lors du rechargement
 window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0); // Définit la position de défilement en haut à gauche
-});
+})
 
 //////////////////////////////////////
 // Code pour le Pwasson
