@@ -226,3 +226,38 @@ function createBubble() {
 
 // Generate bubbles at intervals
 setInterval(createBubble, 500);
+
+// Function to play audio at random intervals
+function playAudioRandomly() {
+    const audio = document.getElementById('randomAudio');
+    const minInterval = 5000; // Minimum interval in milliseconds (e.g., 5 seconds)
+    const maxInterval = 30000; // Maximum interval in milliseconds (e.g., 15 seconds)
+
+    function playAudio() {
+        audio.play();
+        const randomInterval = Math.random() * (maxInterval - minInterval) + minInterval;
+        setTimeout(playAudio, randomInterval);
+    }
+
+    playAudio();
+}
+
+// Start playing audio randomly
+playAudioRandomly();
+
+// Get the audio element and the seagull button
+const audio = document.getElementById('continuousAudio');
+const seagullButton = document.getElementById('boutonSeagull');
+
+// Function to play audio continuously
+function playAudioContinuously() {
+    audio.play();
+}
+
+// Start playing audio when the page loads
+playAudioContinuously();
+
+// Stop the audio when the seagull button is clicked
+seagullButton.addEventListener('click', () => {
+    audio.pause();
+});

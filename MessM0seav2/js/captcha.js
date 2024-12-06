@@ -132,6 +132,26 @@ function resetCaptcha() {
 
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButton = document.getElementById('bottom2Button');
+    if (scrollButton) {
+        scrollButton.addEventListener('click', function() {
+            // Create a new button element
+            const newButton = document.createElement('button');
+            newButton.textContent = 'New Button';
+            newButton.style.marginLeft = '10px'; // Add some space between the buttons
+
+            // Insert the new button next to the existing one
+            scrollButton.insertAdjacentElement('afterend', newButton);
+
+            // Add event listener to the new button
+            newButton.addEventListener('click', function() {
+                scrollToSection('layer3');
+            });
+        });
+    }
+});
+
 
 
 
