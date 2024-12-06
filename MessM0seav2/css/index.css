@@ -47,6 +47,7 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
     cursor: pointer;
     font-size: 1.2rem;
+    z-index: 10;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
