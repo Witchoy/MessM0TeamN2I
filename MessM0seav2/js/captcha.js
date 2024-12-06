@@ -136,13 +136,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollButton = document.getElementById('bottom2Button');
     if (scrollButton) {
         scrollButton.addEventListener('click', function() {
-            // Remove any existing button elements
-            const existingButtons = document.getElementsByTagName('button');
-            for (let i = existingButtons.length - 1; i >= 0; i--) {
-                if (existingButtons[i] !== scrollButton) {
-                    existingButtons[i].remove();
-                }
-            }
 
             // Create a new button element
             const newButton = document.createElement('button');
