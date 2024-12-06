@@ -207,3 +207,20 @@ function scrollToTop() {
         behavior: 'smooth'  // Adds a smooth scrolling effect
     });
 }
+
+function createBubble() {
+    const bubbleContainer = document.querySelector('.bubble-container');
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.style.left = `${Math.random() * 100}%`;
+    bubble.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random duration between 2s and 5s
+    bubbleContainer.appendChild(bubble);
+
+    // Remove bubble after animation ends
+    bubble.addEventListener('animationend', () => {
+        bubbleContainer.removeChild(bubble);
+    });
+}
+
+// Generate bubbles at intervals
+setInterval(createBubble, 500);
