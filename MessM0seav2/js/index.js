@@ -1,7 +1,7 @@
 // Remettre la page en haut lors du rechargement
 window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0); // Définit la position de défilement en haut à gauche
-});
+})
 
 
 //////////////////////////////////////
@@ -139,6 +139,33 @@ function animate() {
 animate();
 
 //////////////////////////////////////
+// Code pour les bulles du bouton
+//////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.getElementById('bottomButton');
+    const bubbleContainer = button.querySelector('.bubble-container');
+
+    button.addEventListener('mouseover', function() {
+        for (let i = 0; i < 10; i++) {
+            createBubble();
+        }
+    });
+
+    function createBubble() {
+        const bubble = document.createElement('div');
+        bubble.classList.add('bubble');
+        bubble.style.left = `${Math.random() * 100}%`;
+        bubble.style.animationDuration = `${Math.random() * 2 + 1}s`;
+        bubbleContainer.appendChild(bubble);
+
+        bubble.addEventListener('animationend', function() {
+            bubble.remove();
+        });
+    }
+});
+
+//////////////////////////////////////
 // Code pour le bouton de défilement
 //////////////////////////////////////
 
@@ -173,3 +200,32 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Button with id "scrollButton" not found');
     }
 });
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const targetPosition = section.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 2000; // Duration of the animation in milliseconds (2 seconds)
+        let start = null;
+
+        window.requestAnimationFrame(function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            }
+        });
+
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+    } else {
+        console.error('Section with id', sectionId, 'not found');
+    }
+}

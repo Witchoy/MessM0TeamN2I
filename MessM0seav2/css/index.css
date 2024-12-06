@@ -5,11 +5,21 @@ body {
     overflow: hidden;
 }
 
+/* Ensure each section takes up the full viewport height */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 /*---------------------
 ------- Boutons -------
 ----------------------*/
 
-#boutonSeagull {
+#boutonSeagull{
     position: absolute;
     width: 150px; /* Taille de l'image */
     height: 150px;
@@ -17,6 +27,81 @@ body {
     transition: all 0.4s ease; /* Animation lors du déplacement */
     z-index: 1000; /* Assure que l'image est en avant-plan */
 }
+
+#firstLayer {
+    position: relative; /* Ensure the parent has a relative position */
+}
+
+#secondLayer {
+    position: relative; /* Ensure the parent has a relative position */
+}
+
+#thirdLayer {
+    position: relative; /* Ensure the parent has a relative position */
+}
+
+#fourthLayer {
+    position: relative; /* Ensure the parent has a relative position */
+}
+
+#bottom1Button, #bottom2Button, #bottom3Button {
+    position: absolute;
+    bottom: 20px; /* Position 20px from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #1e90ff, #00bfff); /* Gradient background */
+    color: white; /* White text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#bottom1Button:hover, #bottom2Button:hover, #bottom3Button:hover {
+    background: linear-gradient(45deg, #00bfff, #1e90ff); /* Reverse gradient on hover */
+    transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
+}
+
+/*
+Bulles
+*/
+
+.bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Ensure bubbles don't interfere with button clicks */
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: bubble 2s ease-in-out infinite; /* Set duration to 2 seconds */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+
 
 #boutonSeagull:hover {
     transform: scale(1.2); /* Agrandissement au survol */
@@ -64,6 +149,8 @@ body {
 /*---------------------
 -------- Océan --------
 ----------------------*/
+
+
 
 .ocean-view {
     position: relative;
@@ -121,6 +208,7 @@ canvas {
 
 
 .content {
+
     padding: 50px;
     color: #fff;
     font-size: 1.2rem;

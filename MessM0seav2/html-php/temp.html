@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Immersion Océanique</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cards.css">
 </head>
 <body>
 
@@ -12,10 +13,18 @@
 
 <section id="oceanView" class="ocean-view">
     <!-- Texte central sur la vue initiale -->
+    <div class="content">
+        <h2>Immersion Océanique</h2>
+        <p>Plongez dans les profondeurs de l'océan et découvrez un monde sous-marin fascinant.
+            Explorez les différentes couches de l'océan et rencontrez des créatures marines étonnantes.
+            Préparez-vous à vivre une aventure inoubliable dans les profondeurs de l'océan.</p>
+    </div>
     <div class="ocean-surface-text">
         <h1>Explorez les Profondeurs de l'Océan</h1>
         <p>Commencez votre voyage depuis la surface.</p>
     </div>
+
+
 
     <!-- Effets de vagues -->
     <div class="waves"></div>
@@ -32,12 +41,7 @@
     <div class="scroll-indicator">Cliquez pour plonger</div>
 
 
-    <div class="content">
-        <h2>Immersion Océanique</h2>
-        <p>Plongez dans les profondeurs de l'océan et découvrez un monde sous-marin fascinant.
-            Explorez les différentes couches de l'océan et rencontrez des créatures marines étonnantes.
-            Préparez-vous à vivre une aventure inoubliable dans les profondeurs de l'océan.</p>
-    </div>
+
 
 </section>
 
@@ -45,7 +49,6 @@
 <div id="cours">
     <!-- 1ère section pour continuer vers le bas -->
     <section id="firstLayer" class="content">
-
         <div>
             <h2>Bienvenue dans les Profondeurs !</h2>
             <p>Au fur et à mesure de votre plongée, vous découvrirez l'incroyable biodiversité des océans et l'importance de leur préservation.</p>
@@ -54,35 +57,56 @@
             <p>Les abysses marines sont encore largement inexplorées. Les découvertes récentes révèlent des créatures incroyables et des écosystèmes uniques, adaptés à des conditions extrêmes.</p>
             <p>Rejoignez-nous dans cette aventure pour en apprendre plus sur l'impact du changement climatique et comment nous pouvons agir ensemble pour sauver nos océans.</p>
         </div>
-
-        <div>
-
-        </div>
-
-        <img src="../img/heart.png" alt="heart.png" id="heartImg">
+        <button id="bottom1Button" onclick="scrollToSection('secondLayer')">Click Me
+            <div class="bubble-container"></div>
+        </button>
 
     </section>
 
-    <!-- 2ème section pour continuer vers le bas -->
-    <section id="secondLayer" class="content">
-        <h1>ceci est un essai</h1>
+<!-- 2ème section pour continuer vers le bas -->
+<section id="secondLayer" class="content">
 
-    </section>
+    <div>
+        <h2>l'Océan, le Poumon "Bleu"</h2>
+        <p> Les poumons apportent de l'oxygène au corps,
+            et l'océan produit environ 50% de l'oxygène mondial grâce au phytoplancton.</p>
+        <p>Les océans absorbent également une grande partie du dioxyde de carbone (CO2) de l'atmosphère,
+            aidant à réguler le climat mondial.</p>
+        <p>Impact commun : Les poumons humains et les océans permettent
+            la vie en maintenant un équilibre d'oxygène et de dioxyde de carbone.</p>
+    </div>
+    <button id="bottom2Button" onclick="scrollToSection('thirdLayer')">Click Me
+        <div class="bubble-container"></div>
+    </button>
 
-    <!-- 3ème section pour continuer vers le bas -->
-    <section id="thirdLayer" class="content">
+</section>
+
+<!-- 3ème section pour continuer vers le bas -->
+<section id="thirdLayer" class="content">
+    <div>
+        <h2>Le système digestif océanique</h2>
+        <p>Justification : L'estomac et les intestins digèrent et décomposent les nutriments pour
+            alimenter le corps, tandis que les zones de sédimentation océaniques décomposent et
+            stockent les nutriments organiques et minéraux, alimentant la chaîne alimentaire marine.</p>
+        <p>Impact commun : Ces systèmes gèrent les ressources nécessaires pour nourrir
+            les systèmes qu'ils soutiennent.</p>
+    </div>
+    <button id="bottom3Button" onclick="scrollToSection('fourthLayer')">Click Me
+        <div class="bubble-container"></div>
+    </button>
 
 
-    </section>
+</section>
 
-    <!-- 4ème section pour continuer vers le bas -->
-    <section id="fourthLayer" class="content">
+<!-- 4ème section pour continuer vers le bas -->
+<section id="fourthLayer" class="content">
 
 
     </section>
 </div>
 
 <script src="../js/index.js"></script>
+<script src="../js/cards.js"></script>
 
 </body>
 </html>
