@@ -28,19 +28,19 @@ section {
     z-index: 1000; /* Assure que l'image est en avant-plan */
 }
 
-#firstLayer {
+#layer1 {
     position: relative; /* Ensure the parent has a relative position */
 }
 
-#secondLayer {
+#layer2 {
     position: relative; /* Ensure the parent has a relative position */
 }
 
-#thirdLayer {
+#layer3 {
     position: relative; /* Ensure the parent has a relative position */
 }
 
-#fourthLayer {
+#layer4 {
     position: relative; /* Ensure the parent has a relative position */
 }
 
