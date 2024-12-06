@@ -149,14 +149,15 @@ canvas {
 }
 
 
-#firstLayer {
-    background: linear-gradient(to bottom, #4269b4, #1e3a5f), url('../img/heart.png') no-repeat center center;
-    background-size: cover;
-}
 
 #heartImg {
     position: absolute;
     width: 110px; /* Taille de l'image */
     height: 140px;
     z-index: 0; /* Assure que l'image est en avant-plan */
+}
+
+#cours {
+    background: linear-gradient(to bottom, #4269b4, #1e3a5f), url('../img/cours.png') no-repeat center center;
+    background-size: cover;
 }
