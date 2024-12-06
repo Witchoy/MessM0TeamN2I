@@ -3,7 +3,6 @@ window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0); // Définit la position de défilement en haut à gauche
 });
 
-
 //////////////////////////////////////
 // Code pour le Pwasson
 //////////////////////////////////////
@@ -227,4 +226,11 @@ function scrollToSection(sectionId) {
     } else {
         console.error('Section with id', sectionId, 'not found');
     }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Adds a smooth scrolling effect
+    });
 }
