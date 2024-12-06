@@ -3,7 +3,6 @@ window.addEventListener('beforeunload', function () {
     window.scrollTo(0, 0); // Définit la position de défilement en haut à gauche
 });
 
-
 //////////////////////////////////////
 // Code pour le Pwasson
 //////////////////////////////////////
@@ -138,33 +137,6 @@ function animate() {
 animate();
 
 //////////////////////////////////////
-// Code pour les bulles du bouton
-//////////////////////////////////////
-
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('bottomButton');
-    const bubbleContainer = button.querySelector('.bubble-container');
-
-    button.addEventListener('mouseover', function() {
-        for (let i = 0; i < 10; i++) {
-            createBubble();
-        }
-    });
-
-    function createBubble() {
-        const bubble = document.createElement('div');
-        bubble.classList.add('bubble');
-        bubble.style.left = `${Math.random() * 100}%`;
-        bubble.style.animationDuration = `${Math.random() * 2 + 1}s`;
-        bubbleContainer.appendChild(bubble);
-
-        bubble.addEventListener('animationend', function() {
-            bubble.remove();
-        });
-    }
-});
-
-//////////////////////////////////////
 // Code pour le bouton de défilement
 //////////////////////////////////////
 
@@ -228,3 +200,29 @@ function scrollToSection(sectionId) {
         console.error('Section with id', sectionId, 'not found');
     }
 }
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Adds a smooth scrolling effect
+    });
+}
+
+function createBubble() {
+    const bubbleContainers = document.querySelectorAll('.bubble-container');
+    bubbleContainers.forEach(bubbleContainer => {
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.style.left = `${Math.random() * 100}%`;
+        bubble.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random duration between 2s and 5s
+        bubbleContainer.appendChild(bubble);
+
+        // Remove bubble after animation ends
+        bubble.addEventListener('animationend', () => {
+            bubbleContainer.removeChild(bubble);
+        });
+    });
+}
+
+// Generate bubbles at intervals
+setInterval(createBubble, 500);
