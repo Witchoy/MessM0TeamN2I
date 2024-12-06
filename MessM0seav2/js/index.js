@@ -231,7 +231,7 @@ setInterval(createBubble, 500);
 function playAudioRandomly() {
     const audio = document.getElementById('randomAudio');
     const minInterval = 5000; // Minimum interval in milliseconds (e.g., 5 seconds)
-    const maxInterval = 15000; // Maximum interval in milliseconds (e.g., 15 seconds)
+    const maxInterval = 30000; // Maximum interval in milliseconds (e.g., 15 seconds)
 
     function playAudio() {
         audio.play();
