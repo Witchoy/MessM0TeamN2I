@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersion Océanique</title>
+    <link rel="stylesheet" href="MessM0seav2/css/index.css">
+    <link rel="stylesheet" href="MessM0seav2/css/cards.css">
+</head>
+
+<body>
+<section id="oceanView" class="ocean-view">
+    <!-- Texte central sur la vue initiale -->
+    <div class="content">
+        <h2>Immersion Océanique</h2>
+        <p>Plongez dans les profondeurs de l'océan et découvrez un monde sous-marin fascinant.
+            Explorez les différentes couches de l'océan et rencontrez des créatures marines étonnantes.
+            Préparez-vous à vivre une aventure inoubliable dans les profondeurs de l'océan.</p>
+    </div>
+    <div class="ocean-surface-text">
+        <h1>Explorez les Profondeurs de l'Océan</h1>
+        <p>Commencez votre voyage depuis la surface.</p>
+    </div>
+
+    <!-- Effets de vagues -->
+    <div class="waves"></div>
+    <div class="waves"></div>
+    <canvas id="wavesCanvas"></canvas>
+
+    <!-- Image bouton mobile -->
+    <img src="MessM0seav2/img/seagull.png" alt="seagull.png" id="boutonSeagull" onclick="scrollToSection('layer1')">
+    <img src="MessM0seav2/img/empty.png" alt="empty.png" id="boutonImageLayer" onclick="window.location.href='CookieCauchemar.html'">
+    <img src="MessM0seav2/img/pwasson" alt="pwasson" id="boutonImage2" onclick="window.location.href='CookieCauchemar.html'">
+
+    <!-- Indicateur de scroll -->
+    <div class="scroll-indicator">Cliquez pour plonger</div>
+
+</section>
+
+<div id="cours">
+
+    <!-- 1ère section pour continuer vers le bas -->
+    <section id="layer1" class="content">
+        <div>
+            <h2>Bienvenue dans les Profondeurs !</h2>
+            <p>Au fur et à mesure de votre plongée, vous découvrirez l'incroyable biodiversité des océans et l'importance de leur préservation.</p>
+            <p>Le voyage commence ici. Explorez, apprenez et agissez pour la protection de notre planète bleue.</p>
+            <h3>Des Mystères Profonds</h3>
+            <p>Les abysses marines sont encore largement inexplorées. Les découvertes récentes révèlent des créatures incroyables et des écosystèmes uniques, adaptés à des conditions extrêmes.</p>
+            <p>Rejoignez-nous dans cette aventure pour en apprendre plus sur l'impact du changement climatique et comment nous pouvons agir ensemble pour sauver nos océans.</p>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>
+
+        <button id="bottom1Button" onclick="scrollToSection('layer2')">Click Me
+        </button>
+
+    </section>
+
+<!-- 2ème section pour continuer vers le bas -->
+<section id="layer2" class="content">
+
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h3>Cœur</h3>
+                <p>Le cœur humain est un organe vital qui assure la circulation du sang à travers le corps.
+                    Il est composé de quatre cavités : deux oreillettes et deux ventricules.
+                    Le cœur fonctionne comme une pompe qui envoie le sang oxygéné dans tout le corps pour nourrir les organes et les tissus,
+                    tout en récupérant le sang pauvre en oxygène pour l'envoyer vers les poumons.
+                    Il bat environ 70 à 75 fois par minute au repos et peut s'accélérer en fonction des besoins de l'organisme,
+                    par exemple pendant l'exercice physique. Le cœur joue un rôle clé dans le maintien de l'homéostasie,
+                    en régulant la température corporelle et en veillant à ce que chaque cellule du corps reçoive les nutriments
+                    et l'oxygène dont elle a besoin pour fonctionner. Il est ainsi essentiel à la survie et au bien-être de l'organisme.</p>
+            </div>
+            <div class="card-back">
+                <h3>Courants océaniques</h3>
+                <p>Les courants marins sont souvent comparés au cœur de l'océan en raison de leur rôle crucial dans le maintien de la dynamique de l'écosystème marin. Ces courants agissent comme un système circulatoire pour l'océan, en transportant l'eau, la chaleur, les nutriments et les gaz dissous à travers les vastes étendues océaniques. Ils régulent la température des océans, affectant ainsi le climat global. Par exemple, le courant chaud du Golfe, qui transporte de l'eau chaude des tropiques vers le nord de l'Atlantique, joue un rôle clé dans le réchauffement de l'Europe de l'Ouest.
+                    Les courants marins permettent également une circulation de l'eau qui soutient la vie marine, en acheminant des nutriments essentiels pour la photosynthèse des phytoplanctons et en permettant aux espèces marines de migrer et de se nourrir. De plus, ces courants influencent les cycles de reproduction de nombreuses espèces marines. Tout comme le cœur humain permet aux organes de recevoir de l'oxygène et des nutriments, les courants marins assurent la "santé" de l'océan en maintenant un équilibre vital entre ses différentes régions. Ils contribuent à la stabilité des écosystèmes marins et sont donc essentiels à la biodiversité océanique.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="boutonLifeBelt" onclick="scrollToTop()">
+        <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+    </button>
+    <div class="bubble-container"></div>
+    <button id="bottom2Button" onclick="scrollToSection('layer3')">Click Me
+    </button>
+
+</section>
+
+<!-- 3ème section pour continuer vers le bas -->
+<section id="layer3" class="content">
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h3>Poumon</h3>
+                <p>Les poumons sont les organes responsables des échanges gazeux dans le corps humain. Ils prennent l'oxygène de l'air et éliminent le dioxyde de carbone, permettant la respiration et la survie de toutes les cellules. Ils jouent un rôle fondamental dans l’équilibre de l'oxygène et du CO2 dans l’organisme.</p>
+            </div>
+            <div class="card-back">
+                <h3>Le poumon bleu</h3>
+                <p>L’océan est souvent qualifié de "poumon bleu" de la Terre. Il génère environ 50% de l'oxygène terrestre, principalement grâce à la photosynthèse réalisée par le phytoplancton. De plus, l'océan absorbe le CO2, agissant comme un régulateur du climat en atténuant les effets des gaz à effet de serre.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bubble-container"></div>
+    <button class="boutonLifeBelt" onclick="scrollToTop()">
+        <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+    </button>
+
+    <button id="bottom3Button" onclick="scrollToSection('layer4')">Click Me
+    </button>
+
+
+</section>
+
+<!-- 4ème section pour continuer vers le bas -->
+<section id="layer4" class="content">
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h3>Estomac</h3>
+                <p>L'estomac est un organe qui décompose les aliments, en extrayant les nutriments nécessaires à l'énergie et à la réparation cellulaire. Il joue un rôle crucial dans la digestion en transformant les aliments en substances que le corps peut utiliser efficacement.</p>
+            </div>
+            <div class="card-back">
+                <h3>La sédimentation</h3>
+                <p>Les zones de sédimentation sous-marines agissent comme l'estomac de l'océan, en décomposant et en stockant les nutriments organiques et minéraux. Ces sédiments nourrissent les chaînes alimentaires marines, offrant des ressources essentielles aux organismes marins.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bubble-container"></div>
+    <button class="boutonLifeBelt" onclick="scrollToTop()">
+        <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+    </button>
+    <button id="bottom4Button" onclick="scrollToSection('layer5')">Click Me
+    </button>
+
+
+</section>
+
+    <!-- 5ème section pour continuer vers le bas -->
+    <section id="layer5" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>La peau</h3>
+                    <p>La peau est la barrière protectrice du corps humain, qui protège contre les agressions extérieures tout en régulant les échanges thermiques et hydriques. Elle permet également de ressentir des stimuli externes, comme la chaleur, la douleur et la pression.</p>
+                </div>
+                <div class="card-back">
+                    <h3>La surface océanique</h3>
+                    <p>La surface de l'océan fonctionne comme une peau pour la Terre, en régulant les échanges entre l’eau et l’atmosphère. Elle permet l'échange de gaz (oxygène et CO2), d'humidité et d'énergie thermique, régulant ainsi le climat terrestre.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>    
+        <button id="bottom5Button" onclick="scrollToSection('layer6')">Click Me
+        </button>
+    </section>
+
+    <!-- 6ème section pour continuer vers le bas -->
+    <section id="layer6" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Le système nerveux</h3>
+                    <p>Le système nerveux central coordonne les activités du corps humain en envoyant des signaux électriques entre le cerveau, la moelle épinière et les autres organes. Il régule les fonctions corporelles et permet la communication entre les différentes parties du corps.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Le réseau trophique marin</h3>
+                    <p>Le réseau trophique marin relie tous les organismes de l’océan dans un système interconnecté où chaque perturbation dans une partie peut affecter l’ensemble du système. Il régule l’énergie et les nutriments, tout comme le système nerveux transmet les informations dans le corps humain.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>    
+        <button id="bottom6Button" onclick="scrollToSection('layer7')">Click Me
+        </button>
+    </section>
+
+    <!-- 7ème section pour continuer vers le bas -->
+    <section id="layer7" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Le squelette</h3>
+                    <p>Le squelette humain est la structure qui soutient et protège les organes internes. Il permet la mobilité grâce à l'articulation des os et est essentiel à la stabilité du corps tout entier.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Le relief océanique</h3>
+                    <p>Le relief océanique, avec ses montagnes sous-marines, ses plateaux et ses fosses, soutient la structure de l'océan. Il détermine les courants marins et l'écosystème sous-marin, créant des habitats variés pour une biodiversité riche.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>    
+        <button id="bottom7Button" onclick="scrollToSection('layer8')">Click Me
+        </button>
+    </section>
+
+
+    <!-- 8ème section pour continuer vers le bas -->
+    <section id="layer8" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Le système immunitaire</h3>
+                    <p>Le système immunitaire protège le corps contre les infections en identifiant et en éliminant les agents pathogènes. Il est constitué d'organes, de cellules et de protéines qui travaillent ensemble pour maintenir la santé de l'organisme.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Les récifs coraliens</h3>
+                    <p>Les récifs coralliens jouent un rôle similaire en protégeant les côtes contre l'érosion et en offrant un abri à une multitude d'espèces marines. Ils forment un écosystème complexe, agissant comme une première ligne de défense contre les menaces extérieures pour la biodiversité marine.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>    
+        <button id="bottom8Button" onclick="scrollToSection('layer9')">Click Me
+        </button>
+    </section>
+
+    <section id="layer9" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Le foie</h3>
+                    <p>Le foie est responsable de filtrer les toxines et de métaboliser les nutriments, régulant ainsi la composition sanguine. Il joue un rôle clé dans le stockage de l’énergie et le maintien de l'équilibre interne du corps.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Les filtres magiques de l'océan</h3>
+                    <p>Les filtres naturels, tels que les coquillages et les moules marines, agissent comme les filtres du foie dans l’océan. Ils capturent et éliminent les impuretés, contribuant à maintenir l'équilibre de l'écosystème marin en purifiant l'eau.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>    
+        <button id="bottom9Button" onclick="scrollToSection('layer10')">Click Me
+        </button>
+    </section>
+
+    <section id="layer10" class="content">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Les algues</h3>
+                    <p>Les algues, notamment le phytoplancton, produisent environ 50% de l'oxygène terrestre à travers la photosynthèse. Elles jouent un rôle clé dans la régulation des gaz à effet de serre et sont essentielles à l'équilibre climatique et écologique de la Terre.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Les poissons</h3>
+                    <p>Les poissons, en tant que prédateurs et proies, transportent de l'énergie à travers la chaîne alimentaire marine. Leur mouvement dans les océans, de même que leur rôle dans les réseaux trophiques, est essentiel pour maintenir l'équilibre écologique et énergétique des océans.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bubble-container"></div>
+        <button class="boutonLifeBelt" onclick="scrollToTop()">
+            <img src="MessM0seav2/img/tinyLifeBelt.png" alt="tinyLifeBelt.png">
+        </button>    
+        <button id="bottom10Button" onclick="scrollToSection('layer11')">Click Me
+        </button>
+    </section>
+
+</div>
+
+<script src="MessM0seav2/js/cards.js"></script>
+<script src="MessM0seav2/js/index.js"></script>
+
+</body>
+</html>
