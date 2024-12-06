@@ -226,3 +226,21 @@ function createBubble() {
 
 // Generate bubbles at intervals
 setInterval(createBubble, 500);
+
+// Function to play audio at random intervals
+function playAudioRandomly() {
+    const audio = document.getElementById('randomAudio');
+    const minInterval = 5000; // Minimum interval in milliseconds (e.g., 5 seconds)
+    const maxInterval = 15000; // Maximum interval in milliseconds (e.g., 15 seconds)
+
+    function playAudio() {
+        audio.play();
+        const randomInterval = Math.random() * (maxInterval - minInterval) + minInterval;
+        setTimeout(playAudio, randomInterval);
+    }
+
+    playAudio();
+}
+
+// Start playing audio randomly
+playAudioRandomly();
