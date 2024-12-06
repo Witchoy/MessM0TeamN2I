@@ -28,21 +28,11 @@ section {
     z-index: 1000; /* Assure que l'image est en avant-plan */
 }
 
-#layer1 {
+#layer1, #layer2, #layer3, #layer4, #layer5, #layer6, #layer7, #layer8, #layer9, #layer10 {
     position: relative; /* Ensure the parent has a relative position */
 }
 
-#layer2 {
-    position: relative; /* Ensure the parent has a relative position */
-}
 
-#layer3 {
-    position: relative; /* Ensure the parent has a relative position */
-}
-
-#layer4 {
-    position: relative; /* Ensure the parent has a relative position */
-}
 
 #bottom1Button, #bottom2Button, #bottom3Button, #bottom4Button, #bottom5Button, #bottom6Button, #bottom7Button, #bottom8Button, #bottom9Button, #bottom10Button {
     position: absolute;
