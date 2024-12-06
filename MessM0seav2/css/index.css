@@ -44,7 +44,7 @@ section {
     position: relative; /* Ensure the parent has a relative position */
 }
 
-#bottom1Button, #bottom2Button, #bottom3Button {
+#bottom1Button, #bottom2Button, #bottom3Button, #bottom4Button, #bottom5Button, #bottom6Button, #bottom7Button, #bottom8Button, #bottom9Button, #bottom10Button {
     position: absolute;
     bottom: 20px; /* Position 20px from the bottom */
     left: 50%;
@@ -60,7 +60,7 @@ section {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#bottom1Button:hover, #bottom2Button:hover, #bottom3Button:hover {
+#bottom1Button:hover, #bottom2Button:hover, #bottom3Button:hover, #bottom4Button:hover, #bottom5Button:hover, #bottom6Button:hover, #bottom7Button:hover, #bottom8Button:hover, #bottom9Button:hover, #bottom10Button:hover {
     background: linear-gradient(45deg, #00bfff, #1e90ff); /* Reverse gradient on hover */
     transform: translateX(-50%) scale(1.1); /* Slightly enlarge on hover */
 }
