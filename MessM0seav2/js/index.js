@@ -137,33 +137,6 @@ function animate() {
 animate();
 
 //////////////////////////////////////
-// Code pour les bulles du bouton
-//////////////////////////////////////
-
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('bottomButton');
-    const bubbleContainer = button.querySelector('.bubble-container');
-
-    button.addEventListener('mouseover', function() {
-        for (let i = 0; i < 10; i++) {
-            createBubble();
-        }
-    });
-
-    function createBubble() {
-        const bubble = document.createElement('div');
-        bubble.classList.add('bubble');
-        bubble.style.left = `${Math.random() * 100}%`;
-        bubble.style.animationDuration = `${Math.random() * 2 + 1}s`;
-        bubbleContainer.appendChild(bubble);
-
-        bubble.addEventListener('animationend', function() {
-            bubble.remove();
-        });
-    }
-});
-
-//////////////////////////////////////
 // Code pour le bouton de défilement
 //////////////////////////////////////
 
